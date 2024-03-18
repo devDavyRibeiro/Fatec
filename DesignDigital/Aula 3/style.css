@@ -1,0 +1,28 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1,h2,h3{
+    text-align: center;
+}
+h1,h2{
+    color: orange;
+}
+h3{
+    background: grey;
+    padding: 20px;
+}
+#titulo{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border: 10px solid yellow;
+    padding: 5px;
+    background-color: darkgoldenrod;
+}
+ul{
+    padding-left: 70px;
+    
+}
+ul li{
+    list-style: none;
+    display: inline;
+}
