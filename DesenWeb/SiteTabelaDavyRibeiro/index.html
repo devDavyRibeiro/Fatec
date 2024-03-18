@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Site Tabela</title>
+</head>
+<body>
+    <h1>Trabalhando com Tabelas</h1><hr>
+<!-- 
+    <table border="10">
+        <tr>
+            <td>
+                <p>A Tabela é formada por <br>várias células</p>
+                <p>A Tabela é formada por <br>várias células</p>
+                <p>A Tabela é formada por <br>várias células</p>
+                <p>A Tabela é formada por <br>várias células</p>
+            </td>
+        </tr>
+    </table>
+    <table border="10">
+        <caption>Tabela Ilustrativa</caption>
+        <tr>
+            <th>Elementos</th>
+            <th>Tabela</th>
+        </tr>
+        <tr>
+            <td>Linha de Elementos</td>
+            <td>Linha de Tabela</td>
+        </tr>
+    </table>
+    <table border="1">
+        <thead>
+            <tr>
+                <th colspan="2">Título</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Conteúdo</td>
+                <td>Conteúdo 2</td>
+            </tr>
+        </tbody>
+    </table>
+ -->
+    <div id="central">
+        <table>
+            <thead>
+                <caption>Tabela de Preços de Carros da Abrão Reze</caption>
+                <tr class="primeiro">
+                    <th colspan="3">Aluguel</th>
+                    <th colspan="2">Compra</th>
+                </tr>
+                <tr>
+                    <th scope="col">Marcas</th>
+                    <th scope="col">Modelos</th>
+                    <th scope="col">Valor por mês</th>
+                    <th scope="col">Modelos</th>
+                    <th scope="col">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row" rowspan="2">Ford</th>
+                    <td>Fox</td>
+                    <td>R$2000,00</td>
+                    <td>Fox</td>
+                    <td>R$80000,00</td>
+                </tr>
+                <tr>
+                    <td>-----------</td>
+                    <td>-------------------</td>
+                    <td>Maverick</td>
+                    <td>R$160000,00</td>
+                </tr>
+                <tr>
+                    <th scope="row" rowspan="2">Fiat</th>
+                    <td>Palio</td>
+                    <td>R$1000,00</td>
+                    <td>Palio</td>
+                    <td>R$60000,00</td>
+                </tr>
+                <tr>
+                    <td>Argo</td>
+                    <td>R$5000,00</td>
+                    <td>-----------</td>
+                    <td>-------------------</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+body{
+    text-align: center;
+}
+#central{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table, tr, td, th{
+    font-size: large;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+    margin-top: 30px;
+}
+td{
+    padding: 10px;
+    text-align: center;
+}
+th{
+    padding: 5px;
+}
+th[scope='col']{
+    background-color:darkblue;
+    color: white;
+}
+th[scope='row']{
+    background-color: dodgerblue;
+}
+tr:nth-of-type(even){
+    background-color: rgb(206, 231, 253);
+}
+caption{
+    padding-top: 10px;
+    caption-side: bottom;
+    text-decoration: underline;
+}
+.primeiro{
+    background-color: cornflowerblue;
+    color: white;
+}

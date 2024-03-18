@@ -1,0 +1,35 @@
+body {
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 2px solid;
+    background-color: aliceblue;
+}
+img {
+    border: 5px solid;
+    border-radius: 10%;
+    width: 40%;
+}
+h1 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+h2{
+    padding-left: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+p {
+    margin-left: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    text-indent: 50px;
+}
+.imagem-margin{
+    margin-left: 50px;
+}
+#espace-img{
+    margin-left: 50px;
+}
+
