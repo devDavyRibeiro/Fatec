@@ -1,13 +1,14 @@
-letra = input("Digite uma letra: ").upper()
-if(letra == "A"):
+letra = input("Digite uma letra: ").lower()
+if(letra == "a"):
     print("a letra ", letra, "é uma vogal")
-elif(letra == "E"):
+elif(letra == "e"):
     print("a letra ", letra, "é uma vogal")
-elif(letra == "I"):
+elif(letra == "i"):
     print("a letra ", letra, "é uma vogal")
-elif(letra == "O"):
+elif(letra == "o"):
     print("a letra ", letra, "é uma vogal")
-elif(letra == "U"):
+elif(letra == "u"):
     print("a letra ", letra, "é uma vogal")
 else:
     print("a letra ", letra, "é uma consoante")
+
