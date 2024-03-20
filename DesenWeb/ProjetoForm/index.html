@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Formulário</title>
+</head>
+
+<body>
+    <h1>Cadastro</h1>
+    <hr>
+        <form action="#" method="get">
+            <label for="nome">Seu Nome: </label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome *" required><br>
+            <label for="tel">Seu Telefone: </label>
+            <input type="tel" name="tel" id="tel" placeholder="Digite seu Telefone"><br>
+            <label for="email">Seu E-Mail: </label>
+            <input type="email" name="email" id="email" placeholder="Digite seu E-Mail *" required><br>
+            <label>Deseja receber nossas novidades?</label>
+            <input type="radio" name="novidade" id="novidadeSim" value="Sim" required>
+            <label for="novidadeSim">Sim</label>
+            <input type="radio" name="novidade" id="novidade" value="Não" required>
+            <label for="novidadesNao">Não</label>
+            <br>
+            <label for="mensagem">Sua mensagem: </label>
+            <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Mensagem *" required></textarea> <br>
+            <br>
+            <input type="reset" value="Limpar">
+            <input type="submit" value="Enviar">
+        </form>
+</body>
+
+</html>

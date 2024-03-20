@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <hr>
+    <form action="#" method="get">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome" required placeholder="Insira seu nome aqui" size="30" maxlength="30" minlength="10">
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
+        <label for="senha">Senha: </label>
+        <input type="password"
+               name="senha"
+               id="senha"
+               maxlength="10"
+               minlength="4"
+               required
+        >
+        <label for="idade">Idade: </label>
+        <input type="number"name="idade" id="idade" max="100" min="4" step="4" value="4">
+        <br>
+        <label for="cidade">Cidade: </label>
+        <input type="text" name="ciade" id="cidade" placeholder="Insira o nome da ciade onde você mora" value="Sorocaba">
+        <label for="uf">UF: </label>
+        <select name="uf" id="uf">
+            <optgroup label="Sudeste">
+                <option value="São Paulo" selected>SP</option>
+                <option value="Rio de Janeiro">RJ</option>  
+            </optgroup>
+            <optgroup label="Centro-Oeste">
+                <option value="Mato G. do Sul">MS</option>
+            </optgroup>
+            
+        </select>
+        <label for="cor">Cor Preferida: </label>
+        <input type="color" name="cor" id="cor">
+        <label for="site">Site</label>
+        <input type="url" name="url" id="site">
+        <br>
+        <label for="nota">Nota: </label>
+        <input type="range" name="nota" id="nota" min="0" max="2">
+        <label for="foto">Foto</label>
+        <input type="file" name="foto" id="foto">
+        <label for="datanasc">Data de Nascimento:</label>
+        <input type="date" name="data" id="datanasc">
+        <label for="tel">Telefone:</label>
+        <input type="tel" name="telefone" id="tel" placeholder="(xx)xxxxx-xxxx">
+        <br>
+        <input type="submit" value="Cadastrar">
+        <input type="reset" value="Limpar Dados">
+    </form>
+</body>
+</html>
