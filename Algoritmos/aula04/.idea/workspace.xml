@@ -4,42 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c496f5-31a9-424c-9949-e2feaa6ab8e6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ex01.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex02.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex03.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex04.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex05.py" afterDir="false" />
-    </list>
+    <list default="true" id="2389db59-24fa-4d83-ac6b-4b35fb858578" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="2e3uz1XNBi2MRY9YRd1W3pOuE3n" />
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2duegnjnXcBzzGMcodyXdoQ6Asm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.ex03.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="ex04" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="aula06" />
+    <configuration name="ex03" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="aula05" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -50,7 +43,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ex04.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ex03.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -61,18 +54,25 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ex04" />
+        <item itemvalue="Python.ex03" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="64c496f5-31a9-424c-9949-e2feaa6ab8e6" name="Changes" comment="" />
-      <created>1711145841881</created>
+      <changelist id="2389db59-24fa-4d83-ac6b-4b35fb858578" name="Changes" comment="" />
+      <created>1710862504001</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1711145841881</updated>
+      <updated>1710862504001</updated>
     </task>
     <servers />
   </component>

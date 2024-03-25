@@ -1,4 +1,5 @@
-x = int(input("Digite o valor de x: "))
-y = int(input("Digite o valor de y: "))
+nota = float(input("Digite sua nota:"))
+if nota >= 7:
+    nota = nota + 0.5
+print("Sua nota é ", nota)
 
-print("Resultado da Soma: ", x+y)
