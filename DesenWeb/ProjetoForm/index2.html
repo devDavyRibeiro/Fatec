@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 2</title>
+</head>
+<body>
+    <p id="titulo">Calculadora</p>
+    <label id="labelNum">Número: </label>
+    <input type="text" id="valorNum">
+    <button onclick="calcular()">Calcular</button>
+    <hr>
+    <p id="titulo2">Divisão</p>
+    <label id="labelNum2">Número: </label>
+    <input type="text" id="valorNum2">
+    <button onmousemove="dividir()">Dividir</button>
+
+    <script>
+        function calcular(){
+            n1 = document.getElementById("valorNum").value
+            x = n1 * 2
+            document.getElementById('titulo').innerText = x
+            alert(x)
+        }
+        function dividir()
+        {
+            n1 = document.getElementById('valorNum2').value
+            x = n1 / 2
+            document.getElementById('titulo2').innerText = x
+            alert("Edelson me salvaa!!!")
+        }
+
+    </script>
+
+</body>
+</html>
