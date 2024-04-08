@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <label for="num1">Número 1: </label>
+    <input type="text" id="num1">
+    <label for="num2">Número 2: </label>
+    <input type="text" id="num2">
+
+    <button onclick="soma()">+</button>
+    <button onclick="subtrair()">-</button>
+
+
+    <script>
+        /*
+            x = 3 + 7;
+            console.log("entrei " + x);
+            console.log(`A soma é ${3 + 7} dos números 3 e 7`);
+        */
+
+        function soma()
+        {
+            num1 = Number(document.getElementById('num1').value);
+            num2 = Number(document.getElementById('num2').value);
+            if (num1 === 0)
+            
+                document.getElementById('num1').style.color = "red";
+            
+            else
+                document.getElementById('num1').style.color = "yellow";
+
+            x = num1 + num2;
+
+            alert(x);
+        }
+        function subtrair()
+        {
+            num1 = Number(document.getElementById('num1').value);
+            num2 = Number(document.getElementById('num2').value);
+
+            x = num1 - num2; 
+
+            alert(x);
+        }
+    </script>
+</body>
+</html>
