@@ -1,7 +1,11 @@
 ano = int(input("Informe um ano: "))
-res = ano % 4
 
-if(res == 0):
-    print("O ano de ", ano, " é um ano bissexto!")
+if(ano % 4 == 0):
+    if(ano % 100 != 0):
+        print(f"O ano de {ano} é um ano bissexto!")
+    elif (ano % 400 == 0):
+        print(f"O ano de {ano} é um ano bissexto!")
+    else:
+        print("O ano de ", ano, " não é um ano bissexto!")
 else:
-    print("O ano de ", ano, " é um ano bissexto!")
+    print("O ano de ", ano," não é um ano bissexto!")
