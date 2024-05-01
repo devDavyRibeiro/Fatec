@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueria XGostoso</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-primary" role="alert">
+                   <h1>Hamburgueria XGostoso</h1> 
+                </div>
+            </div>
+        </div>
+        <fieldset>
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label" for="telefone">Telefone</label>
+                        <input type="text" name="tel" id="telefone" class="form-control">
+                    </div>
+                    <div class="col">
+                        <label class="form-label" for="nomeCliente">Nome do Cliente</label>
+                        <input type="text" name="nomeCliente" id="nomeCliente" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label class="form-label" for="combos">Combos</label>
+                        <select name="valorCombos" id="combos" class="form-select">
+                            <option value="20">X-Bacon</option>
+                            <option value="30">X-Salada</option>
+                            <option value="40">X-Tudo</option>
+                        </select>
+                    </div>
+                    <div class="col-3">
+                        <label class="form-label">Adicionais</label>
+                        <div class="form-check">
+                            <input type="checkbox" name="adicionais" id="adicionarBacon" class="form-check-input" value="10">
+                            <label class="form-check-label" for="adicionarBacon">Bacon</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="adicionais" id="adicionarChedar" class="form-check-input" value="15">
+                            <label class="form-check-label" for="adicionarChedar">Chedar</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" name="adicionais" id="adicionarPicles" class="form-check-input" value="20">
+                            <label class="form-check-label" for="adicionarPicles">Picles</label>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <label class="form-label">Forma de Entrega</label>
+                        <div class="form-check">
+                            <input type="radio" name="tipoEntrega" id="viagem" class="form-check-input" value="30">
+                            <label class="form-check-label" for="viagem">Viagem</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" name="tipoEntrega" id="balcao" class="form-check-input" value="0">
+                            <label class="form-check-label" for="balcao">Balcão</label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row ms-5 mt-5 mb-5 justify-content-md-center">
+                    <div class="col-2">
+                        <button class="btn btn-primary" onclick="totalPagar()">Calcular</button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-primary" type="reset">Novo Pedido</button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-primary" onclick="recibo()">Recibo</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="totalApagar" class="form-label">Total Apagar</label> 
+                        <input type="text" name="totalApagar" id="totalApagar" readonly class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="descricao" class="form-label">Descrição do Pedido</label>
+                        <p class="form-control "id="descricao">...</p>
+                    </div>
+                </div>
+            </form>
+        </fieldset>
+
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
