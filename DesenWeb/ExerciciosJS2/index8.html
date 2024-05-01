@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Exercícios 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h1>Davy Oliveira Ribeiro</h1>
+        <h2>Exercícios JavaScript</h2>
+    </section>
+    <section>
+        <ul>
+            <a href="index1.html"><li>Exercício 1: </li></a>
+            <a href="index2.html"><li>Exercício 2: </li></a>
+            <a href="index3.html"><li>Exercício 3: </li></a>
+            <a href="index4.html"><li>Exercício 4: </li></a>
+            <a href="index5.html"><li>Exercício 5: </li></a>
+            <a href="index6.html"><li>Exercício 6: </li></a>
+            <a href="index7.html"><li>Exercício 7: </li></a>
+            <a href="index8.html"><li>Exercício 8: </li></a>
+        </ul>
+    </section>
+    <section>
+        <h3>Receba o valor do produto (input), sua quantidade (input), forma de pagamento (radio) – 
+            débito, pix, crédito.  Calcule e mostre (p) o total a pagar (quantidade multiplicada pelo valor).  
+            Verifique a forma de pagamento escolhida. Se o valor a pagar for superior ou igual a R$ 1000,00 
+            dê 10% de desconto. Se for escolhido pix será dado um desconto de 10% sobre o total calculado. 
+            Se for escolhido crédito não há desconto. Se for escolhido débito será dado um desconto de 
+            5%.Exiba uma mensagem informando o total a pagar, o desconto e a forma e pagamento 
+            escolhida.</h3>
+        <div class="ex">
+            <label class="lb_input" for="valorProduto">Valor do Produto</label>
+            <input type="text" name="valorProduto" id="valorProduto">
+            <br>
+            <label class="lb_input" for="qtd">Quantidade</label>
+            <input type="number" name="qtd" id="qtd">
+            <div>
+                
+            </div>
+            <input type="radio" name="formapag" id="credito" value="Crédito">
+            <label for="credito">Crédito</label>
+        
+            <input type="radio" name="formapag" id="pix" value="Pix">
+            <label for="pix">Pix</label>
+        
+            <input type="radio" name="formapag" id="debito" value="Débito">
+            <label for="debito">Débito</label>
+        
+            <button onclick="ex08()">Calcular</button>
+            <p id="res">Resultado</p>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
