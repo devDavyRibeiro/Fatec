@@ -10,7 +10,9 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="col-md-12 alert alert-primary titulo" role="alert">Hamburgueria XGostoso</div>
+        <div class="col-md-12 alert alert-primary titulo" role="alert">
+            <p>Hamburgueria XGostoso </p><span id="relogio"></span>
+        </div>
         <div class="row">
             <div class="col-md-6">
                 <label class="form-label" for="telefone">Telefone <i class="ri-phone-fill"></i></label>
@@ -24,7 +26,7 @@
         <div class="row">
             <div class="col-md-6">
                 <label for="combos">Combos <i class="ri-restaurant-line"></i></label>
-                <select class="form-select" name="combos" id="combos">
+                <select class="form-select" name="combos" id="combos" onchange="totalPagar()">
                     <option selected value="20">R$20,00 -- Hamburguer com hamburger</option>
                     <option value="35">R$35,00 -- Hamburguer Saúdavel 100%</option>
                     <option value="5">R$5,00 -- XNada</option>
@@ -37,26 +39,26 @@
             <div class="col-md-3">
                 <label for="adicionais">Adicionais <i class="ri-add-fill"></i></label>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="adicionais" id="bacon_check" value="10">
+                    <input class="form-check-input" type="checkbox" name="adicionais" id="bacon_check" value="10" onchange="totalPagar()">
                     <label class="form-check-label" for="bacon_check">Bacon</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="adicionais" id="chedar_check" value="15">
+                    <input class="form-check-input" type="checkbox" name="adicionais" id="chedar_check" value="15" onchange="totalPagar()">
                     <label class="form-check-label" for="chedar_check">Chedar</label>
                 </div>
                 <div class="form-check">
-                     <input class="form-check-input" type="checkbox" name="adicionais" id="picles_check" value="20">
+                     <input class="form-check-input" type="checkbox" name="adicionais" id="picles_check" value="20" onchange="totalPagar()">
                     <label class="form-check-label" for="picles_check">Picles</label>
                 </div>
             </div>
             <div class="col-md-3">
                 <label for="entrega">Entrega <i class="ri-truck-fill"></i></label>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="escolha_entrega" id="escolha_viagem" value="15" checked>
+                    <input class="form-check-input" type="radio" name="escolha_entrega" id="escolha_viagem" value="15" checked onchange="totalPagar()">
                     <label class="form-check-label" for="viagem">Viagem</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="escolha_entrega" id="escolha_balcao" value="5">
+                    <input class="form-check-input" type="radio" name="escolha_entrega" id="escolha_balcao" value="0" onchange="totalPagar()">
                     <label class="form-check-label" for="viagem">Balcão</label>
                 </div>
             </div>
@@ -69,7 +71,7 @@
                 <button type="reset" class="btn btn-primary">Novo Pedido <i class="ri-add-circle-line"></i></button>
             </div>
             <div class="col-md-2">
-                <button class="btn btn-primary">Recibo <i class="ri-receipt-line"></i></button>
+                <button class="btn btn-primary" onclick="imprimir()">Recibo <i class="ri-receipt-line"></i></button>
             </div>
         </div>
         <div class="row">
@@ -81,7 +83,7 @@
         <div class="row">
             <div class="col-md-12">
                 <label class="form-label" for="descricao">Descrição:</label>
-                <input class="form-control" type="text" name="descricao" id="descricao" disabled>
+                <label class="form-control" id="descricao"></label>
             </div>
         </div>
     </div>

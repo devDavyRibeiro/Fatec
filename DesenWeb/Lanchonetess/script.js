@@ -2,7 +2,7 @@ let adicionais=0;
 let entrega = 0;
 let combos = 0;
 function totalPagar(){
-    let total=0;
+    let total = 0;
     let inputTotal = document.getElementById("total");
     let nomeCliente = document.getElementById("nome");
     let telefoneCliente = document.getElementById("telefone");
@@ -12,9 +12,8 @@ function totalPagar(){
     calcularEntrega();
     calcularCombos();
     total= adicionais + entrega + combos;
-    inputTotal.value = "R$" + total;
-
-    descricao.value = "Nome do Cliente: " + nomeCliente.value + " Número de Telefone: " + telefoneCliente.value; 
+    inputTotal.value = `O total a pagar é R$${total}`;
+    descricao.innerHTML = `Valores: <br>Adicionais: R$ ${adicionais} <br>Combo: R$ ${combos} <br>Entrega: R$ ${entrega}`; 
 
 }
 
@@ -45,6 +44,16 @@ function calcularEntrega(){
     for(i=0; i<quantidade;i++){
         if(selecionados[i].checked){
             entrega = Number(selecionados[i].value);
+            break;
         }
     }
 }
+function imprimir(){
+    print();
+}
+function relogio(){
+    let horario = new Date();
+    let mensagem = horario.getHours() + ":" + horario.getMinutes() + ":" + horario.getSeconds();
+    document.getElementById('relogio').innerHTML = mensagem;
+} 
+setInterval(relogio, 1000)
