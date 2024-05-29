@@ -10,19 +10,20 @@ document.getElementById('btnLogradouro').addEventListener('click', async functio
         alert("Cep inválido");
     }
     else{
-        document.getElementById('rua').value = `${dados.logradouro} ${dados.bairro} ${dados.localidade} ${dados.uf}`;
+        document.getElementById('rua').value += `${dados.logradouro} ${dados.bairro} ${dados.localidade} ${dados.uf}`;
         cidade.value = `${dados.localidade}`;
     }
 });
 document.getElementById('btnClima').addEventListener('click',async function pesquisarClima(){
     if(cidade.value != ""){
         dado = document.getElementById('dados');
-        const apiClima = `https://api.openweathermap.org/data/2.5/weather?q=${cidade.value}&appid=1a544251aba1ef4ee1d7308fe0825f8c`;
+        const apiClima = `https://api.openweathermap.org/data/2.5/weather?q=${cidade.value}&units=metric&appid=1a544251aba1ef4ee1d7308fe0825f8c`;
         const respApi = await fetch(apiClima);
         const dados = await respApi.json();
 
-        dado.innerText = `Temperatura: ${dados.main.temp - 273.15} °C Humidade: ${dados.main.humidity} % Vento: ${dados.wind.speed} km/h Tempo: ${dados.weather[0].main}`;
-        pais = dados.sys.contry;
+        dado.innerText = `Temperatura: ${dados.main.temp} °C Humidade: ${dados.main.humidity} % Vento: ${dados.wind.speed} km/h Tempo: ${dados.weather[0].main}`;
+        pais = dados.sys.country;
+        document.getElementById('lbCidade').innerText += " " + cidade.value;
         pesquisarBandeira();
     }
     else{
@@ -31,5 +32,5 @@ document.getElementById('btnClima').addEventListener('click',async function pesq
 });
 
 async function pesquisarBandeira(){
-    
+    document.getElementById('bandeira').setAttribute('src', `https://flagsapi.com/${pais}/flat/32.png`);
 }
