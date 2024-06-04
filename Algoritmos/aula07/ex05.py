@@ -4,8 +4,7 @@ while(termo <= 0):
     if(termo <= 0):
         print('O termo deve ser positivo')
 
-primeiro = 0
+primeiro = 1
 segundo = 1
 
 for i in range(1,termo):
-    print()
