@@ -122,7 +122,17 @@ where id = 1
 select * from tbl_Funcionarios
 
 -- 16) Adicione mais 10 registros, com dados a sua escolha a tabela "Tbl_Funcionarios"
-
+Insert into Tbl_Funcionarios Values
+('Santiago Luiz', 'Sub-gerente',8750.00),
+('Luiz Santiago ', 'Gerente',12000.00),
+('Davy Luiz', 'Fachineiro',1200.00),
+('Luiz Davy ', 'Programador',5000.00),
+('Pedro Luiz', 'QA',2500.00),
+('João Pedro', 'Logistica',3000.00),
+('Guilherme Ferreira', 'Supervisão',7000.00),
+('Vanessa', 'Secretária',2000.00),
+('Ariele', 'Gerente Geral',10000.00),
+('Piva', 'Estagiário',500.00);
 -- 17) Crie uma tabela chamada "Tbl_Vendas" com os campos: Id (int, chave primária), ProdutoId (int, chave estrangeira referenciando a tabela "Produtos"), Quantidade (int), ValorTotal (decimal), e DataVenda (date).
 
 create table  Tbl_Vendas(
@@ -145,9 +155,3 @@ create table  Tbl_Vendas(
 
 Delete  Tbl_Vendas
 where id = 1
-/*
-
-
-
-
-*/
