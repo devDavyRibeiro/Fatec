@@ -29,7 +29,6 @@ public class Ex1ES {
         Collections.sort(cor);
         
         System.out.println(cor);
-        
-        
+           
     }
 }
