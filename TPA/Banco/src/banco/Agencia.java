@@ -21,11 +21,16 @@ public class Agencia extends Entidade{
         this.numAgencia = numAgencia;
         this.gerente = gerente;
     }
+    public Agencia(){
+        //
+    }
     public String getNumAgencia(){
         return this.numAgencia;
     }
     public void setNumAgencia(String numAgencia){
-        this.numAgencia = numAgencia;
+        if(validaNumAgencia(numAgencia)){
+            this.numAgencia = numAgencia;
+        }
     }
 
     public String getGerente() {
@@ -33,10 +38,13 @@ public class Agencia extends Entidade{
     }
 
     public void setGerente(String gerente) {
-        this.gerente = gerente;
+        if(validaGerente(gerente)){
+            this.gerente = gerente;
+        }
+  
     }
     public boolean validaNumAgencia(String numAgencia){
-        if(numAgencia == null || numAgencia.length() != 6){
+        if(numAgencia.isBlank() || numAgencia.isEmpty() || numAgencia.length() != 6){
             JOptionPane.showMessageDialog(null, "Valor não pode ser em 0 ou nulo");
             return false;
         }

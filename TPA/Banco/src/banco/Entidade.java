@@ -94,9 +94,8 @@ public class Entidade {
     }
 
     public void setCnpj(String cnpj) {
-        if (validaNumero(cnpj)){
-            this.cnpj = cnpj; 
-        }
+        this.cnpj = cnpj; 
+
     }
     public void setNome(String nome){
         if(validaNome(nome)){
@@ -108,7 +107,10 @@ public class Entidade {
     return this.endereco;
     }
     public void setEndereco(String endereco){
-        this.endereco = endereco;
+        if (validaEndereco(endereco)){
+           this.endereco = endereco;
+        }
+        
     }
 
     public String getComplemento(){
@@ -118,8 +120,18 @@ public class Entidade {
         this.complemento = complemento;
     }
 
+    public boolean validaEndereco(String endereco){
+        if(endereco.isEmpty() || endereco.isBlank()){
+            JOptionPane.showMessageDialog(null, "Valor atribuido não pode ser em branco ou nulo");
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    
     public boolean validaNome(String nome){
-        if(nome == null){
+        if(uf.isEmpty() || uf.isBlank()){
             JOptionPane.showMessageDialog(null, "Valor atribuido não pode ser em branco ou nulo");
             return false;
         }
@@ -128,7 +140,7 @@ public class Entidade {
         }
     }
     public boolean validaNumero(String numero){
-        if(nome == null){
+        if(uf.isEmpty() || uf.isBlank()){
             JOptionPane.showMessageDialog(null, "Valor atribuido não pode ser em branco ou nulo");
             return false;
         }
@@ -137,7 +149,7 @@ public class Entidade {
         }
     }
     public boolean validaCidade(String cidade){
-        if(cidade == null){
+        if(uf.isEmpty() || uf.isBlank()){
             JOptionPane.showMessageDialog(null, "Valor atribuido não pode ser em branco ou nulo");
             return false;
         }
@@ -156,15 +168,17 @@ public class Entidade {
     }   
     public boolean validaCEP(String cep){
         if(cep.isEmpty() ||cep.isBlank() || cep.length() != 8 ){
-            JOptionPane.showMessageDialog(null, "Valor atribuido não pode ser em branco ou ter 8 caracteres");
+            JOptionPane.showMessageDialog(null, "Valor de CEP atribuido não pode ser em branco ou ter 8 caracteres");
             return false;
         }
         else{
             return true;
         }
     }
+    /*
+    
     public boolean validaCNPJ(String cnpj){
-        if(cnpj.isEmpty() ||cnpj.isBlank() || cnpj.length() != 14 ){
+        if(cnpj.length() != 14 ){
             JOptionPane.showMessageDialog(null, "Valor atribuido não pode ser em branco ou ter 14 caracteres");
             return false;
         }
@@ -172,4 +186,5 @@ public class Entidade {
             return true;
         }
     }
+    */
 }

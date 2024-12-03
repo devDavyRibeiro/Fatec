@@ -20,6 +20,9 @@ public class Usuario {
         this.senha = senha;
         this.idCliente = idCliente;
     }
+    public Usuario(){
+        //
+    }
 
     public int getIdUsuario() {
         return IdUsuario;

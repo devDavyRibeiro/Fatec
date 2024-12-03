@@ -17,15 +17,17 @@ public class Cliente extends Entidade{
     private String fone;
     private String sexo;
     private String cpf;
+    private String dataNasc;
     
     public Cliente (String nome,String endereco, String complemento, String numero,String bairro,String cidade,
-            String uf,String cep,String cnpj,String email, boolean status, String fone, String sexo,int idCliente){
+            String uf,String cep,String cnpj,String email, boolean status, String fone, String sexo,int idCliente, String dataNasc){
         super(nome, endereco, complemento, numero, bairro, cidade, uf, cep,cnpj);
         this.email = email;
         this.fone = fone;
         this.sexo = sexo;
         this.status = status;
         this.idCliente = idCliente;
+        this.dataNasc = dataNasc;
     }
     public Cliente(){
         //construtor vazio
@@ -36,7 +38,9 @@ public class Cliente extends Entidade{
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        if(validaEmail(email)){
+            this.email = email;
+        }
     }
 
     public boolean isStatus() {
@@ -62,7 +66,9 @@ public class Cliente extends Entidade{
     }
 
     public void setSexo(String sexo) {
-        this.sexo = sexo;
+        if(validaSexo(sexo)){
+            this.sexo = sexo;
+        }
     }
 
     public int getIdCliente() {
@@ -81,7 +87,19 @@ public class Cliente extends Entidade{
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    public String getDataNasc() {
+        return dataNasc;
+    }
+
+    public void setDataNasc(String dataNasc) {
+        if(ValidaDataNasc(dataNasc)){
+            this.dataNasc = dataNasc;
+        }
+    }
   
+  
+    
     public boolean validaIdCliente(int IdCliente){
         if(IdCliente == 0){
             JOptionPane.showMessageDialog(null, "IdCliente não pode ser em 0 ou nulo");
@@ -100,6 +118,15 @@ public class Cliente extends Entidade{
             return true;
         }
     }
+    public boolean validaEmail(String email){
+        if(email.isEmpty() || email.isBlank()){
+            JOptionPane.showMessageDialog(null, "Valor atribuido não pode ser em branco ou ter 9 caracteres");
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
     public boolean validaSexo(String sexo){
         if(sexo.isEmpty() || sexo.isBlank() || sexo.length() != 1){
             JOptionPane.showMessageDialog(null, "Valor atribuido não pode ser em branco ou, ou nulo, ou ter mais de"
@@ -111,6 +138,15 @@ public class Cliente extends Entidade{
         }
         else{
             JOptionPane.showMessageDialog(null, "Valor diferente de M e F");
+            return false;
+        }
+    }
+    public boolean ValidaDataNasc(String datanasc){
+        if(datanasc.isEmpty() || datanasc.isBlank()){
+            return true;
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Valor atribuido não pode ser em branco ou nulo");
             return false;
         }
     }

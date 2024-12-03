@@ -18,6 +18,9 @@ public class Historico {
         this.idHistorico = idHistorico;
         this.historico = historico;
     }
+    public Historico(){
+        //
+    }
 
     public int getIdHistorico() {
         return idHistorico;
