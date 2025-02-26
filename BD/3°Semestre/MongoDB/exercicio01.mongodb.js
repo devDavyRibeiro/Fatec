@@ -109,9 +109,9 @@ db.funcionarios.updateMany({departamento:{$eq:'TI'}},{
     }
 })
 
-// 07)
-use('exercicio01')
+// // 07)
 db.funcionarios.deleteOne({nome:{$eq:'João Silva'}})
+use('exercicio01')
 
 
 // 08)
@@ -174,6 +174,14 @@ db.funcionarios.find({
 
 // 16)
 use('exercicio01')
-db.funcionarios.find()
+db.funcionarios.find({
+    projetos: {$size:2}
+})
+
+// 17)
+use('exercicio01')
+db.funcionarios.find({   
+    dataCadastro:{$gt: new Date('2025-01-27')}
+})
 use('exercicio01')
 db.funcionarios.find()
