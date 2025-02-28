@@ -183,5 +183,88 @@ use('exercicio01')
 db.funcionarios.find({   
     dataCadastro:{$gt: new Date('2025-01-27')}
 })
+
+// 18)
+use('exercicio01')
+db.funcionarios.find({
+    nome:/João/
+})
+
+// 19)
+use('exercicio01')
+db.funcionarios.find({
+    nome: /Silva$/
+})
+
+// 20)
+use('exercicio01')
+db.funcionarios.find({
+    nome:
+        {$in:[/^Luis/,/^Luiz/]}
+    
+})
+
+// 21)
+use('exercicio01')
+db.funcionarios.find({
+    $and:[
+        {departamento:'TI'},
+        {cargo:'Desenvolvedor'},
+        {salario:{$gt:4500}}
+    ]    
+})
+//22)
+use('exercicio01')
+db.funcionarios.find({
+    $and:[
+        {cargo:{$not:{$eq: 'Desenvolvedor'}}},
+        {$and: [
+            {dataContratacao:{$gt: new Date('2023-01-01')}},
+            {dataContratacao:{$lt: new Date('2024-01-01')}}
+        ]}
+    ]
+})
+
+// 23)
+use('exercicio01')
+db.funcionarios.find({
+    $and:[
+        {projetos: {$in:['Projeto A','Projeto B']}},
+        {salario:{$lte:5000}}
+    ]
+})
+
+//24)
+use('exercicio01')
+db.funcionarios.find({
+    $and:[
+        {projetos:
+            {$not:{$eq:'Projeto A'}}
+        },
+        {departamento:
+            {$not:{$eq:'TI'}}
+        }
+    ]
+})
+//25)
+use('exercicio01')
+db.funcionarios.find({
+    $or:[
+        {sexo:'Feminino'},
+        {dataContratacao:{lt:new Date('2023-01-01')}}
+    ]
+})
+//26)
+use('exercicio01')
+db.funcionarios.find({
+    $and:[
+        {$or:[
+            {cargo: {$eq:'Desenvolvedor'}},
+            {cargo: /^Analista/}
+        ]},
+        {salario: {$gt:4000}},
+        {dataContratacao:{$gte: new Date('2023-01-01')}}
+    ]
+})
 use('exercicio01')
 db.funcionarios.find()
