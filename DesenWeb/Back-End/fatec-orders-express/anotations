@@ -1,0 +1,7 @@
+npm i -D typecript @types/express @types/node --> instala o typeScript, instalando as dependencias de express e nodes com tipagem
+e  instala as dependencias no ambiente de desenvolvimento
+
+npx tsc --init --> cria o tsconfig no projeto
+
+No package.json, na are ade scripts, escrever
+    "dev" : "ts-node-dev --respawn --transpile-only server.ts" --> comando para o terminal para servidor transpilar e restartar o servidor 
