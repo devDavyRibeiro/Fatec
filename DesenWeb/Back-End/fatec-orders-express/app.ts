@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 
 // Importação da biblioteca express
-const express = require('express');
+import express from "express";
 // Criação da aplicação
 const app = express();
 
@@ -104,7 +104,7 @@ app.delete('/products/:id',(req : Request, res : Response) =>{
         return;
     }
     const index = products.indexOf(product);
-    products.splice(index);
+    products.splice(index, 1);
     res.status(200).send();
 })
 
@@ -156,7 +156,7 @@ app.delete('/clients/:id',(req : Request, res : Response) =>{
         return;
     }
     const index = clients.indexOf(client);
-    clients.splice(index);
+    clients.splice(index, 1);
     res.status(200).send();
 })
 
