@@ -58,9 +58,21 @@ app.get("/", (req : Request, res : Response)=>{
     res.send("Hello Word Again!");
 });
 // Define um método get que responde ao path /products/
-app.get('/products',(req : Request, res : Response) =>{
-    //res.status --> Código de Resposta HTTP 
-    res.status(200).json(products);
+app.get('/products/',(req : Request, res : Response) =>{
+    //res.status --> Código de Resposta HTTP
+    let listProducts; []
+    if(!req.query){
+        listProducts = products;
+    }
+    else{
+        let {name,brand,supplier,stockId} = req.query;
+        listProducts = products.filter((product) =>{
+            return product.name === name?.toString() && product.brand === brand?.toString() && product.supplier === supplier?.toString() && product.stockId === Number(stockId)
+        })
+    }
+
+    res.status(200).json(listProducts);
+
 })
 // Define um método get que responde ao path /products/:id
 app.get('/products/:id', (req : Request, res : Response) =>{
@@ -73,6 +85,7 @@ app.get('/products/:id', (req : Request, res : Response) =>{
     }
     res.status(200).json(product)
 })
+
 //cadastro
 app.post("/products", (req : Request, res : Response)=>{
     const product = req.body;
